@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  operations:
+    build: ./operations
+    ports:
+      - "5000:5000"
+    links:
+      - db
+  db:
+    build: ./db
